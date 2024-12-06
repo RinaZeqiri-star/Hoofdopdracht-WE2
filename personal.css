@@ -1,0 +1,221 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f9efe6;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin: 5%;
+	margin-top: 1%;
+}
+
+.logo img {
+	width: 300px;
+	height: 100px;
+}
+
+.navigation ul {
+	list-style-type: none; /* Removes bullet points */
+	padding: 0;
+	margin: 0;
+}
+
+/* Each navigation list item */
+.navigation ul li {
+	display: inline-block; /* Displays list items side-by-side */
+	font-size: 15px;
+}
+
+.navigation ul li a {
+	text-decoration: none; /* Removes underline from links */
+	color: black;
+	padding: 10px 20px; /* Adds padding around each link for spacing */
+}
+
+.navigation ul li a:hover,
+.navigation ul li a.active {
+	border-bottom: 1px solid white;
+}
+
+.main-content {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.image-container {
+	width: 15%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container img {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.content {
+	background-image: url("images/homepagina/EMB.jpg");
+	width: 70%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.6;
+	font-family: Roboto, sans-serif;
+}
+
+.slider {
+	position: relative;
+	width: 980px;
+	height: 450px;
+	margin: 50px auto;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+
+.slider-controls {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	display: flex; /* Change layout to flex */
+	gap: 10px; /* Add spacing between buttons */
+	transform: translateX(-50%);
+	z-index: 1000;
+	list-style: none;
+	text-align: center;
+}
+
+/*DE BUTTON ONDER DE YEAR*/
+.slider-controls label {
+	display: inline-block;
+	border: none;
+	height: 40px; /* Increased height for button-like appearance */
+	width: 60px; /* Wider button */
+	border-radius: 5px; /* Slightly rounded corners */
+	cursor: pointer;
+	background-color: white;
+	color: black; /* Make the text visible */
+	text-align: center;
+	line-height: 40px; /* Center text vertically */
+	font-size: 14px; /* Adjust text size */
+	transition: background-color 0.2s linear, transform 0.1s ease-in-out;
+}
+
+.slider-controls label:hover {
+	background-color: #800020; /* Change color on hover */
+}
+
+.slider-controls label:active {
+	transform: scale(0.95); /* Simulate button press */
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"],
+#btn-4:checked ~ .slider-controls label[for="btn-4"],
+#btn-5:checked ~ .slider-controls label[for="btn-5"],
+#btn-6:checked ~ .slider-controls label[for="btn-6"],
+#btn-7:checked ~ .slider-controls label[for="btn-7"],
+#btn-8:checked ~ .slider-controls label[for="btn-8"] {
+	background-color: #800020; /* Highlight active button */
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1),
+#btn-2:checked ~ .slides .slide:nth-child(2),
+#btn-3:checked ~ .slides .slide:nth-child(3),
+#btn-4:checked ~ .slides .slide:nth-child(4),
+#btn-5:checked ~ .slides .slide:nth-child(5),
+#btn-6:checked ~ .slides .slide:nth-child(6),
+#btn-7:checked ~ .slides .slide:nth-child(7),
+#btn-8:checked ~ .slides .slide:nth-child(8) {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.slides {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: transform 250ms linear;
+}
+
+.slide-content {
+	width: 400px;
+}
+
+.slide-title {
+	margin-bottom: 20px;
+	font-size: 36px;
+}
+
+.slide-text {
+	margin-bottom: 20px;
+}
+
+.slide-image img {
+	max-width: 100%;
+}
+
+/* Slide animations */
+@keyframes swap-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	50% {
+		transform: translateX(50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+#btn-1:not(:checked) ~ .slides .slide:nth-child(1),
+#btn-2:not(:checked) ~ .slides .slide:nth-child(2),
+#btn-3:not(:checked) ~ .slides .slide:nth-child(3),
+#btn-4:not(:checked) ~ .slides .slide:nth-child(4),
+#btn-5:not(:checked) ~ .slides .slide:nth-child(5),
+#btn-6:not(:checked) ~ .slides .slide:nth-child(6),
+#btn-7:not(:checked) ~ .slides .slide:nth-child(7),
+#btn-8:not(:checked) ~ .slides .slide:nth-child(8) {
+	animation-name: swap-out;
+	animation-duration: 300ms;
+	animation-timing-function: linear;
+}
