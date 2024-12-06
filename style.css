@@ -3,20 +3,14 @@ body {
 	padding: 0;
 	background-color: #f9efe6;
 }
-/* The header element is used to align the logo and navigation horizontally */
-header {
-	display: flex; /* Make header a flex container for horizontal alignment */
-	align-items: center; /* Vertically centers items within the header */
-	justify-content: space-between; /* Adds space between the logo and navigation */
-}
 
-.rina-foto {
-	background-image: url("images/homepagina/rina.2.jpg"); /* Set the image path */
-	background-size: cover; /* Makes the image cover the entire page */
-	background-position: center; /* Center the image */
-	background-repeat: no-repeat; /* Prevent the image from repeating */
-	background-attachment: fixed; /* Makes the background stay in place when scrolling */
-	color: white; /* Set text color to ensure readability over the background */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin: 5%;
+	margin-top: 1%;
 }
 
 .logo img {
@@ -30,7 +24,6 @@ header {
 	margin: 0;
 }
 
-/* Each navigation list item */
 .navigation ul li {
 	display: inline-block; /* Displays list items side-by-side */
 	font-size: 15px;
@@ -38,7 +31,7 @@ header {
 
 .navigation ul li a {
 	text-decoration: none; /* Removes underline from links */
-	color: white;
+	color: black;
 	padding: 10px 20px; /* Adds padding around each link for spacing */
 }
 
@@ -47,25 +40,578 @@ header {
 	border-bottom: 1px solid white;
 }
 
-/*text*/
+/*homepage*/
 
-.besa h1 {
-	font-size: 50px;
-	margin-top: 10%;
+/* Container for image and rectangle */
+.rina-container {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
 }
 
-.teks p {
-	font-size: 25px;
+/* Image styling */
+.rina-foto img {
+	width: 1090px;
+	height: 687px;
+	margin-left: 429px;
 }
 
+/* Rectangle overlay */
+.overlay-rectangle {
+	position: absolute;
+	top: 13%; /* Adjust the vertical position */
+	width: 400px;
+	height: 648px;
+	background-color: #fb3833; /* Semi-transparent burgundy */
+	color: white;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Text styling inside rectangle */
+.overlay-rectangle h1 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.overlay-rectangle p {
+	font-size: 16px;
+	text-align: center;
+	line-height: 1.5;
+}
 /*button*/
 .button button {
 	margin-left: 79%;
-	background-color: #800020;
+	background-color: #fb3833;
 	border: none;
 	color: white;
 	padding: 15px 32px;
 	text-align: center;
 	display: inline-block;
 	font-size: 25px;
+}
+
+/*personal page*/
+
+.main-content {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.image-container {
+	width: 15%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container img {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.content {
+	background-image: url("images/homepagina/EMB.jpg");
+	width: 70%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.6;
+	font-family: Roboto, sans-serif;
+}
+
+.slider {
+	position: relative;
+	width: 980px;
+	height: 450px;
+	margin: 50px auto;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+
+.slider-controls {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	display: flex; /* Change layout to flex */
+	gap: 10px; /* Add spacing between buttons */
+	transform: translateX(-50%);
+	z-index: 1000;
+	list-style: none;
+	text-align: center;
+}
+
+/*DE BUTTON ONDER DE YEAR*/
+.slider-controls label {
+	display: inline-block;
+	border: none;
+	height: 40px; /* Increased height for button-like appearance */
+	width: 60px; /* Wider button */
+	border-radius: 5px; /* Slightly rounded corners */
+	cursor: pointer;
+	background-color: white;
+	color: black; /* Make the text visible */
+	text-align: center;
+	line-height: 40px; /* Center text vertically */
+	font-size: 14px; /* Adjust text size */
+	transition: background-color 0.2s linear, transform 0.1s ease-in-out;
+}
+
+.slider-controls label:hover {
+	background-color: #800020; /* Change color on hover */
+}
+
+.slider-controls label:active {
+	transform: scale(0.95); /* Simulate button press */
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"],
+#btn-4:checked ~ .slider-controls label[for="btn-4"],
+#btn-5:checked ~ .slider-controls label[for="btn-5"],
+#btn-6:checked ~ .slider-controls label[for="btn-6"],
+#btn-7:checked ~ .slider-controls label[for="btn-7"],
+#btn-8:checked ~ .slider-controls label[for="btn-8"] {
+	background-color: #800020; /* Highlight active button */
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1),
+#btn-2:checked ~ .slides .slide:nth-child(2),
+#btn-3:checked ~ .slides .slide:nth-child(3),
+#btn-4:checked ~ .slides .slide:nth-child(4),
+#btn-5:checked ~ .slides .slide:nth-child(5),
+#btn-6:checked ~ .slides .slide:nth-child(6),
+#btn-7:checked ~ .slides .slide:nth-child(7),
+#btn-8:checked ~ .slides .slide:nth-child(8) {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.slides {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: transform 250ms linear;
+}
+
+.slide-content {
+	width: 400px;
+}
+
+.slide-title {
+	margin-bottom: 20px;
+	font-size: 36px;
+}
+
+.slide-text {
+	margin-bottom: 20px;
+}
+
+.slide-image img {
+	max-width: 100%;
+}
+
+/* Slide animations */
+@keyframes swap-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	50% {
+		transform: translateX(50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+#btn-1:not(:checked) ~ .slides .slide:nth-child(1),
+#btn-2:not(:checked) ~ .slides .slide:nth-child(2),
+#btn-3:not(:checked) ~ .slides .slide:nth-child(3),
+#btn-4:not(:checked) ~ .slides .slide:nth-child(4),
+#btn-5:not(:checked) ~ .slides .slide:nth-child(5),
+#btn-6:not(:checked) ~ .slides .slide:nth-child(6),
+#btn-7:not(:checked) ~ .slides .slide:nth-child(7),
+#btn-8:not(:checked) ~ .slides .slide:nth-child(8) {
+	animation-name: swap-out;
+	animation-duration: 300ms;
+	animation-timing-function: linear;
+}
+
+/*cultural page*/
+
+.description {
+	max-width: 600px;
+	margin: 0 auto;
+	color: rgba(229, 229, 229, 0.7);
+}
+
+div,
+img,
+footer {
+	position: relative;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 36pt;
+}
+
+h2 {
+	font-size: 24pt;
+}
+
+h3 {
+	font-size: 18pt;
+}
+
+h4 {
+	font-size: 16pt;
+}
+
+h5 {
+	font-size: 14pt;
+}
+
+h6 {
+	font-size: 12pt;
+}
+
+p {
+	font-size: 12pt;
+	margin-bottom: 12pt;
+}
+
+strong {
+	font-weight: 900;
+	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	color: #e5e5e5;
+}
+
+a {
+	transition: color 0.25s ease-in-out;
+	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #dff3fd;
+}
+a:visited {
+	color: #dff3fd;
+}
+li.active a,
+a:hover,
+a:active {
+	color: #e5e5e5;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.centered-y {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.distribution-map {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.distribution-map > img {
+	width: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.distribution-map .map-point {
+	cursor: pointer;
+	outline: none;
+	z-index: 0;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	opacity: 0.8;
+	transform: translate(-50%, -50%);
+	-moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+	-o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+	-webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
+	-webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
+	transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+	background: rgba(26, 26, 26, 0.85);
+	border: 5px solid #7fcff7;
+}
+.distribution-map .map-point .content {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	transition: opacity 0.25s ease-in-out;
+	width: 100%;
+	height: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow: overlay;
+}
+.distribution-map .map-point:active,
+.distribution-map .map-point:focus {
+	margin: 0;
+	padding: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+	opacity: 1;
+	width: 300px;
+	height: 220px;
+	color: #e5e5e5;
+	z-index: 1;
+	transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+}
+.distribution-map .map-point:active .content,
+.distribution-map .map-point:focus .content {
+	filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+	opacity: 1;
+	-moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+	-o-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+	-webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+	-webkit-transition-delay: 0.25s, 0s, 0s;
+	transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+	overflow: hidden;
+}
+.distribution-map .map-point:active .content a:hover,
+.distribution-map .map-point:active .content a:active,
+.distribution-map .map-point:focus .content a:hover,
+.distribution-map .map-point:focus .content a:active {
+	color: #afe1fa;
+}
+
+/*journey page*/
+
+.main-content {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.image-container {
+	width: 15%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container img {
+	width: 100%;
+	height: auto;
+}
+
+.content {
+	background-image: url("images/homepagina/EMB.jpg");
+	width: 70%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titel h1 {
+	margin-left: 7%;
+	font-size: 50px;
+	margin-top: 6%;
+}
+
+.eerste-tekst p {
+	margin-left: 7%;
+	font-size: 20px;
+}
+
+.vaile {
+	margin-left: 7%;
+	margin-right: 7%;
+	display: flex; /* Apply flexbox to align image and text horizontally */
+	align-items: center; /* Vertically centers the image and text */
+	gap: 20px; /* Adds space between the image and the text */
+}
+
+.vaile img {
+	width: 250px;
+	height: 300px;
+}
+
+.vaile p {
+	font-size: 20px; /* Adjust the text size as needed */
+	max-width: 900px; /* Optional: Set a maximum width for the paragraph */
+	line-height: 1.6; /* Optional: Adjust the line height for readability */
+}
+
+/*de videos van de interwiuevs*/
+
+.students h1 {
+	margin-top: 5%;
+	margin-left: 7%;
+}
+
+.int video {
+	display: block; /* Ensure video is rendered as a block element */
+	margin: 0 auto; /* Optional: Center the video horizontally */
+	gap: 20px;
+}
+
+/*virtueel dance klas*/
+.main-content {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.image-container {
+	width: 15%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container img {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.content {
+	background-image: url("images/homepagina/EMB.jpg");
+	width: 70%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titel h1 {
+	margin-left: 7%;
+	font-size: 50px;
+	margin-top: 6%;
+}
+
+.eerste-tekst p {
+	margin-left: 7%;
+	font-size: 20px;
+}
+
+/* Styles for the icon-container as buttons */
+.icon-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.icon-container a {
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	padding: 20px;
+	border-radius: 8px;
+	width: 120px;
+	height: 120px;
+	margin: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container a:hover {
+	background-color: #800020;
+	transform: scale(1.05); /* Slightly increase size on hover */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for hover effect */
+}
+
+.icon-item {
+	font-size: 16px;
+}
+
+.icon-item img {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 8px;
+}
+
+/*the dances page*/
+.titel h1 {
+	margin-left: 7%;
+	font-size: 50px;
+	margin-top: 6%;
+}
+
+.eerste-tekst p {
+	margin-left: 7%;
+	font-size: 20px;
+}
+
+.int {
+	margin: 20px 0;
+}
+
+.video-container {
+	display: block;
+	max-width: 100%; /* Ensure video takes the full width available */
+	margin: 0 auto;
+	padding: 0 15%; /* Adds space to the left and right */
+}
+
+.int video {
+	width: 100%;
+	height: auto;
 }

@@ -68,29 +68,3 @@ header {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.titel h1 {
-	margin-left: 7%;
-	font-size: 50px;
-	margin-top: 6%;
-}
-
-.eerste-tekst p {
-	margin-left: 7%;
-	font-size: 20px;
-}
-
-.int {
-	margin: 20px 0;
-}
-
-.video-container {
-	display: block;
-	max-width: 100%; /* Ensure video takes the full width available */
-	margin: 0 auto;
-	padding: 0 15%; /* Adds space to the left and right */
-}
-
-.int video {
-	width: 100%;
-	height: auto;
-}
