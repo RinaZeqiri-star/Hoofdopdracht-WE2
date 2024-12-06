@@ -1,0 +1,111 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f9efe6;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin: 5%;
+	margin-top: 1%;
+}
+
+.logo img {
+	width: 300px;
+	height: 100px;
+}
+
+.navigation ul {
+	list-style-type: none; /* Removes bullet points */
+	padding: 0;
+	margin: 0;
+}
+
+/* Each navigation list item */
+.navigation ul li {
+	display: inline-block; /* Displays list items side-by-side */
+	font-size: 15px;
+}
+
+.navigation ul li a {
+	text-decoration: none; /* Removes underline from links */
+	color: black;
+	padding: 10px 20px; /* Adds padding around each link for spacing */
+}
+
+.navigation ul li a:hover,
+.navigation ul li a.active {
+	border-bottom: 1px solid white;
+}
+
+.main-content {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.image-container {
+	width: 15%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container img {
+	width: 100%;
+	height: auto;
+}
+
+.content {
+	background-image: url("images/homepagina/EMB.jpg");
+	width: 70%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titel h1 {
+	margin-left: 7%;
+	font-size: 50px;
+	margin-top: 6%;
+}
+
+.eerste-tekst p {
+	margin-left: 7%;
+	font-size: 20px;
+}
+
+.vaile {
+	margin-left: 7%;
+	margin-right: 7%;
+	display: flex; /* Apply flexbox to align image and text horizontally */
+	align-items: center; /* Vertically centers the image and text */
+	gap: 20px; /* Adds space between the image and the text */
+}
+
+.vaile img {
+	width: 250px;
+	height: 300px;
+}
+
+.vaile p {
+	font-size: 20px; /* Adjust the text size as needed */
+	max-width: 900px; /* Optional: Set a maximum width for the paragraph */
+	line-height: 1.6; /* Optional: Adjust the line height for readability */
+}
+
+/*de videos van de interwiuevs*/
+
+.students h1 {
+	margin-top: 5%;
+	margin-left: 7%;
+}
+
+.int video {
+	display: block; /* Ensure video is rendered as a block element */
+	margin: 0 auto; /* Optional: Center the video horizontally */
+	gap: 20px;
+}
