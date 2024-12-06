@@ -1,0 +1,71 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f9efe6;
+}
+/* The header element is used to align the logo and navigation horizontally */
+header {
+	display: flex; /* Make header a flex container for horizontal alignment */
+	align-items: center; /* Vertically centers items within the header */
+	justify-content: space-between; /* Adds space between the logo and navigation */
+}
+
+.rina-foto {
+	background-image: url("images/homepagina/rina.2.jpg"); /* Set the image path */
+	background-size: cover; /* Makes the image cover the entire page */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent the image from repeating */
+	background-attachment: fixed; /* Makes the background stay in place when scrolling */
+	color: white; /* Set text color to ensure readability over the background */
+}
+
+.logo img {
+	width: 300px;
+	height: 100px;
+}
+
+.navigation ul {
+	list-style-type: none; /* Removes bullet points */
+	padding: 0;
+	margin: 0;
+}
+
+/* Each navigation list item */
+.navigation ul li {
+	display: inline-block; /* Displays list items side-by-side */
+	font-size: 15px;
+}
+
+.navigation ul li a {
+	text-decoration: none; /* Removes underline from links */
+	color: white;
+	padding: 10px 20px; /* Adds padding around each link for spacing */
+}
+
+.navigation ul li a:hover,
+.navigation ul li a.active {
+	border-bottom: 1px solid white;
+}
+
+/*text*/
+
+.besa h1 {
+	font-size: 50px;
+	margin-top: 10%;
+}
+
+.teks p {
+	font-size: 25px;
+}
+
+/*button*/
+.button button {
+	margin-left: 79%;
+	background-color: #800020;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 25px;
+}
