@@ -1,16 +1,17 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #f9efe6;
+	background-color: #f9efe6; /* Fallback voor video */
 }
 
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 90%;
-	margin: 5%;
-	margin-top: 1%;
+	width: 100%;
+	padding: 2%;
+	background-color: #f9efe6;
+	z-index: 10; /* Zorgt dat de header boven alles ligt */
 }
 
 .logo img {
@@ -42,61 +43,73 @@ header {
 
 /*homepage*/
 
-/* Container for image and rectangle */
-.rina-container {
-	display: flex;
-	position: relative;
-	align-items: center;
-	justify-content: center;
-	margin-top: 20px;
+/* Text overlay on top of video and red filter */
+.text-overlay {
+	position: absolute; /* Absolute to position over the video */
+	top: 50%; /* Adjust as needed */
+	left: 24%;
+	transform: translate(-50%, -50%);
+	text-align: left;
+	color: white; /* Make text visible over the red filter */
+	z-index: 2; /* Above the video and overlay */
 }
 
-/* Image styling */
-.rina-foto img {
-	width: 1090px;
-	height: 687px;
-	margin-left: 429px;
-}
-
-/* Rectangle overlay */
-.overlay-rectangle {
-	position: absolute;
-	top: 13%; /* Adjust the vertical position */
-	width: 400px;
-	height: 648px;
-	background-color: #fb3833; /* Semi-transparent burgundy */
-	color: white;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Text styling inside rectangle */
-.overlay-rectangle h1 {
-	font-size: 24px;
+.text-overlay h1 {
+	font-size: 50px;
+	font-size: bold;
 	margin-bottom: 10px;
 }
 
-.overlay-rectangle p {
+.text-overlay p {
 	font-size: 16px;
-	text-align: center;
 	line-height: 1.5;
 }
-/*button*/
-.button button {
-	margin-left: 79%;
-	background-color: #fb3833;
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	display: inline-block;
-	font-size: 25px;
+
+.loop {
+	position: relative; /* Provides context for absolute positioning */
+	width: 100%;
+	height: 78.7vh; /* Remaining height after the header */
+	overflow: hidden; /* Prevent overflow */
 }
 
+.loop::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 0, 0, 0.3); /* Red overlay */
+	z-index: 1; /* Above the video */
+	pointer-events: none; /* Allow interactions through the overlay */
+}
+
+video.background-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Cover the container completely */
+	z-index: 0; /* Below the overlay */
+}
+
+/*button*/
+/* Button styling */
+.button {
+	position: absolute; /* Ensure it stays on top */
+	top: 90%; /* Adjust positioning as needed */
+	left: 78%;
+	z-index: 2; /* Above the video and overlay */
+}
+
+.button button {
+	background-color: whitesmoke;
+	border: none;
+	color: brown;
+	padding: 15px 32px;
+	font-size: 25px;
+}
 /*personal page*/
 
 .main-content {
