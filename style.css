@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #f9efe6; /* Fallback voor video */
+	background-color: #f9efe6;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
 	width: 100%;
 	padding: 2%;
 	background-color: #f9efe6;
-	z-index: 10; /* Zorgt dat de header boven alles ligt */
+	z-index: 10;
 }
 
 .logo img {
@@ -20,20 +20,20 @@ header {
 }
 
 .navigation ul {
-	list-style-type: none; /* Removes bullet points */
+	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
 
 .navigation ul li {
-	display: inline-block; /* Displays list items side-by-side */
+	display: inline-block;
 	font-size: 15px;
 }
 
 .navigation ul li a {
-	text-decoration: none; /* Removes underline from links */
+	text-decoration: none;
 	color: black;
-	padding: 10px 20px; /* Adds padding around each link for spacing */
+	padding: 10px 20px;
 }
 
 .navigation ul li a:hover,
@@ -45,13 +45,13 @@ header {
 
 /* Text overlay on top of video and red filter */
 .text-overlay {
-	position: absolute; /* Absolute to position over the video */
-	top: 50%; /* Adjust as needed */
+	position: absolute;
+	top: 50%;
 	left: 24%;
 	transform: translate(-50%, -50%);
 	text-align: left;
-	color: white; /* Make text visible over the red filter */
-	z-index: 2; /* Above the video and overlay */
+	color: white;
+	z-index: 2;
 }
 
 .text-overlay h1 {
@@ -66,10 +66,10 @@ header {
 }
 
 .loop {
-	position: relative; /* Provides context for absolute positioning */
+	position: relative;
 	width: 100%;
-	height: 78.7vh; /* Remaining height after the header */
-	overflow: hidden; /* Prevent overflow */
+	height: 78.7vh;
+	overflow: hidden;
 }
 
 .loop::before {
@@ -79,9 +79,9 @@ header {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(255, 0, 0, 0.3); /* Red overlay */
-	z-index: 1; /* Above the video */
-	pointer-events: none; /* Allow interactions through the overlay */
+	background-color: rgba(255, 0, 0, 0.3);
+	z-index: 1;
+	pointer-events: none;
 }
 
 video.background-video {
@@ -90,17 +90,17 @@ video.background-video {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover; /* Cover the container completely */
-	z-index: 0; /* Below the overlay */
+	object-fit: cover;
+	z-index: 0;
 }
 
 /*button*/
-/* Button styling */
+
 .button {
-	position: absolute; /* Ensure it stays on top */
-	top: 90%; /* Adjust positioning as needed */
+	position: absolute;
+	top: 90%;
 	left: 78%;
-	z-index: 2; /* Above the video and overlay */
+	z-index: 2;
 }
 
 .button button {
@@ -110,6 +110,7 @@ video.background-video {
 	padding: 15px 32px;
 	font-size: 25px;
 }
+
 /*personal page*/
 
 .main-content {
@@ -131,14 +132,6 @@ video.background-video {
 	object-fit: cover;
 }
 
-.content {
-	background-image: url("images/homepagina/EMB.jpg");
-	width: 70%;
-	background-color: white;
-	padding: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 html {
 	box-sizing: border-box;
 }
@@ -149,6 +142,11 @@ html {
 	box-sizing: inherit;
 	padding: 0;
 	margin: 0;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+	display: none;
 }
 
 body {
