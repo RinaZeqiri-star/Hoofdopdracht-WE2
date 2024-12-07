@@ -111,7 +111,7 @@ video.background-video {
 	font-size: 25px;
 }
 
-/*personal page*/
+/*PERSONAL PAGE*/
 
 .main-content {
 	display: flex;
@@ -289,7 +289,7 @@ body {
 	animation-timing-function: linear;
 }
 
-/*cultural page*/
+/*CULTURAL PAGE*/
 
 .description {
 	max-width: 600px;
