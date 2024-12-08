@@ -487,6 +487,19 @@ a:active {
 
 /*JOURNEY PAGE*/
 
+.rectangle {
+	background-color: #800020;
+	padding-bottom: 5%;
+	padding-top: 1%;
+}
+
+.titel-vaile h1 {
+	margin-left: 7%;
+	font-size: 50px;
+	margin-top: -1%;
+	color: #e8d4c4;
+}
+
 .titel h1 {
 	margin-left: 7%;
 	font-size: 50px;
@@ -499,7 +512,7 @@ a:active {
 }
 .eerste-tekst p {
 	overflow-wrap: break-word;
-	word-break: break-word; /* Coupe les mots trop longs */
+	word-break: break-word;
 }
 
 .image-container-journey {
@@ -529,22 +542,28 @@ a:active {
 }
 
 .vaile p {
-	font-size: 20px; /* Adjust the text size as needed */
+	font-size: 18px; /* Adjust the text size as needed */
 	max-width: 900px; /* Optional: Set a maximum width for the paragraph */
 	line-height: 1.6; /* Optional: Adjust the line height for readability */
+	color: white;
+}
+
+.eerste-tekst-vaile p {
+	max-width: 750px;
+	margin-left: 7%;
+	color: white;
 }
 
 /*de videos van de interwiuevs*/
 
 .students h1 {
-	margin-top: 5%;
+	margin-top: 3%;
 	margin-left: 7%;
+	color: #800020;
 }
 
-.int video {
-	display: block; /* Ensure video is rendered as a block element */
-	margin: 0 auto; /* Optional: Center the video horizontally */
-	gap: 20px;
+.int {
+	padding-left: 20px;
 }
 
 /*VIRTUAL DANCE CLASS*/
@@ -578,12 +597,6 @@ a:active {
 
 .icon-item {
 	font-size: 16px;
-}
-
-.icon-item img {
-	width: 60px;
-	height: 60px;
-	margin-bottom: 8px;
 }
 
 /*THE DANCE PAGES*/
