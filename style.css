@@ -620,9 +620,27 @@ a:active {
 	margin: 20px 0;
 }
 
-.video-container {
-	display: block;
-	max-width: 100%; /* Ensure video takes the full width available */
-	margin: 0 auto;
-	padding: 0 15%; /* Adds space to the left and right */
+.video {
+	margin-top: -2%;
+	margin-left: 15%;
+	align-items: center;
+}
+
+.eerste-tekst-virtueel p {
+	color: black;
+	margin-left: 7%;
+	margin-top: 1%;
+}
+
+.image-container-dance {
+	width: 15%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container-dance img {
+	width: 100%;
+	height: 84vh;
+	object-fit: cover;
 }
