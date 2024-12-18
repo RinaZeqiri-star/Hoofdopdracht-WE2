@@ -337,10 +337,17 @@ input[type="radio"] {
 
 /*CULTURAL PAGE*/
 
-.description {
-	max-width: 600px;
-	margin: 0 auto;
-	color: rgba(229, 229, 229, 0.7);
+.image-container-cultureel {
+	width: 15%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container-cultureel img {
+	width: 100%;
+	height: 155vh;
+	object-fit: cover;
 }
 
 div,
@@ -354,8 +361,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	font-weight: 300;
@@ -381,19 +387,9 @@ h5 {
 	font-size: 14pt;
 }
 
-h6 {
-	font-size: 12pt;
-}
-
 p {
 	font-size: 12pt;
 	margin-bottom: 12pt;
-}
-
-strong {
-	font-weight: 900;
-
-	color: #e5e5e5;
 }
 
 a {
@@ -401,15 +397,15 @@ a {
 
 	text-transform: uppercase;
 	text-decoration: none;
-	color: #dff3fd;
+	color: #800020;
 }
 a:visited {
-	color: #dff3fd;
+	color: #800020;
 }
 li.active a,
 a:hover,
 a:active {
-	color: #e5e5e5;
+	color: #800020;
 }
 
 .centered {
@@ -425,13 +421,45 @@ a:active {
 	top: 50%;
 	transform: translateY(-50%);
 }
+.content h1 {
+	margin-left: 7%;
+	font-size: 50px;
+	color: #800020;
+}
 
+.content p {
+	margin-left: 7%;
+}
+
+svg:hover {
+	fill: #800020; /* Changes the color of the SVG elements */
+	transition: fill 0.3s ease; /* Smooth transition effect */
+}
+
+.cls-3:hover {
+	fill: #800020; /* Ensures specific elements with class 'cls-3' also change color */
+}
+
+.cls-2:hover {
+	fill: #800020; /* Ensures specific elements with class 'cls-3' also change color */
+}
+
+.map-point h2 {
+	color: black;
+	font-size: 10px;
+	font-weight: bold;
+	position: absolute;
+	top: 50%; /* Centers the text vertically in relation to the button */
+	left: 110%; /* Moves the text to the right of the button */
+	transform: translateY(-50%); /* Ensures the text is perfectly centered vertically */
+	margin-left: 5px; /* Adds a small gap between the button and text */
+}
 .distribution-map {
 	position: relative;
-	width: 100%;
-	padding: 20px;
+	width: 70%; /*de grote van de svg*/
 	box-sizing: border-box;
 	margin: 0 auto;
+	margin-left: 14%;
 }
 .distribution-map > img {
 	width: 100%;
@@ -444,8 +472,8 @@ a:active {
 	outline: none;
 	z-index: 0;
 	position: absolute;
-	width: 40px;
-	height: 40px;
+	width: 10px;
+	height: 10px;
 	border-radius: 20px;
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 	opacity: 0.8;
@@ -455,8 +483,8 @@ a:active {
 	-webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
 	-webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
 	transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-	background: rgba(26, 26, 26, 0.85);
-	border: 5px solid #7fcff7;
+	background: #800020; /* Change this to your desired background color */
+	border: 5px solid #800020; /* Change this to your desired border color */
 }
 .distribution-map .map-point .content {
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -476,7 +504,9 @@ a:active {
 	opacity: 1;
 	width: 300px;
 	height: 220px;
-	color: #e5e5e5;
+	color: #800020; /* Change text color if needed */
+	background: #e8d4c4; /* Add or adjust the background color */
+	border-color: #800020; /* Add or adjust the border color */
 	z-index: 1;
 	transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
 }
@@ -495,7 +525,7 @@ a:active {
 .distribution-map .map-point:active .content a:active,
 .distribution-map .map-point:focus .content a:hover,
 .distribution-map .map-point:focus .content a:active {
-	color: #afe1fa;
+	color: #800020;
 }
 
 /*JOURNEY PAGE*/
