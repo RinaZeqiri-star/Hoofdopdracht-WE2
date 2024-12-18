@@ -15,3 +15,4 @@ async function fetchDances() {
 		console.error("Error no dances no avaible:", error);
 	}
 }
+fetchDances();

@@ -37,57 +37,7 @@
 			</div>
 		</header>
 		<div class="main-content">
-			<script>
-				// Your API URL
-				const apiUrl = "https://your-api-endpoint.com/data";
-
-				// Function to fetch data from the API
-				async function fetchMapData() {
-					try {
-						const response = await fetch(apiUrl);
-						if (!response.ok) {
-							throw new Error("Failed to fetch data");
-						}
-						const data = await response.json();
-						populateMapPoints(data);
-					} catch (error) {
-						console.error("Error fetching map data:", error);
-					}
-				}
-
-				// Function to populate map points dynamically
-				function populateMapPoints(locations) {
-					const mapContainer = document.getElementById("map-container");
-
-					locations.forEach((location) => {
-						const button = document.createElement("button");
-						button.className = "map-point";
-						button.style.top = location.top;
-						button.style.left = location.left;
-
-						const title = document.createElement("h2");
-						title.textContent = location.name;
-
-						const content = document.createElement("div");
-						content.className = "content";
-						const contentInner = `
-					  <div class="centered-y">
-						<h2>${location.name}</h2>
-						<p>${location.description}</p>
-					  </div>
-					`;
-						content.innerHTML = contentInner;
-
-						button.appendChild(title);
-						button.appendChild(content);
-
-						mapContainer.appendChild(button);
-					});
-				}
-
-				// Call the function to fetch data and populate the map
-				fetchMapData();
-			</script>
+			<script></script>
 			<div class="image-container-cultureel">
 				<img src="images/marge-left.svg" alt="Background Left" />
 			</div>
@@ -95,7 +45,6 @@
 				<h1>Cultural immersion</h1>
 				<p>Touch the city of your choice and learn the beautiful dances of different regions of Albania, Kosovo, Montenegro, and Macedonia.</p>
 				<div class="distribution-map">
-					<!-- This was broken for a while because image hosts are annoying, so now it's a data uri. Sorry :( -->
 					<?xml version="1.0" encoding="UTF-8"?>
 					<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 699.1295 802.4744">
 						<defs>
