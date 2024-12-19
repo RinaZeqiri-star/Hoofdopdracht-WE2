@@ -460,6 +460,7 @@ svg:hover {
 	box-sizing: border-box;
 	margin: 0 auto;
 	margin-left: 14%;
+	margin-top: 3%;
 }
 .distribution-map > img {
 	width: 100%;
@@ -503,7 +504,7 @@ svg:hover {
 	filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 	opacity: 1;
 	width: 300px;
-	height: 220px;
+	height: auto;
 	color: #800020; /* Change text color if needed */
 	background: #e8d4c4; /* Add or adjust the background color */
 	border-color: #800020; /* Add or adjust the border color */
