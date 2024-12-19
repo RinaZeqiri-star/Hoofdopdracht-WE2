@@ -142,6 +142,10 @@ video.background-video {
 /*PERSONAL PAGE*/
 
 /*de marge fotos (don't forget to make them move)*/
+
+.erste-tekst-personal p {
+	margin-left: 1%;
+}
 .main-content {
 	display: flex;
 	justify-content: space-between;
@@ -150,16 +154,18 @@ video.background-video {
 }
 
 .image-container-personal {
-	width: 15%;
-	height: auto;
 	display: flex;
-	justify-content: center;
+	justify-content: center; /* Center the SVG horizontally */
+	align-items: center; /* Center the SVG vertically */
+	max-height: 84vh; /* Limit the height to the viewport height */
+	overflow: hidden; /* Hide any overflow */
 }
 
-.image-container-personal img {
-	width: 100%;
-	height: 83.7vh;
-	object-fit: cover;
+.image-container-personal svg {
+	width: 100%; /* Adjusts to the parent container's width */
+	height: auto; /* Keeps the aspect ratio */
+	max-width: 235px; /* Optional, limits how large the SVG can grow */
+	display: block; /* Remove inline space from inline-block behavior */
 }
 
 .image-container-virtuel {
