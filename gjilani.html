@@ -42,7 +42,6 @@
 				<?xml version="1.0" encoding="UTF-8"?>
 				<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228.56 1989.11">
 					<circle class="cls-4" cx="101.84" cy="176.94" r="13.28" />
-
 					<defs>
 						<style>
 							.cls-1,
@@ -114,10 +113,11 @@
 					<circle class="cls-4" cx="201.23" cy="1956" r="13.28" />
 				</svg>
 			</div>
+
 			<div class="content">
-				<a href="/virtuaal.html" class="back-button">←</a>
 				<div class="titel">
 					<h1>Gjilani</h1>
+					<a href="/virtuaal.html" class="back-button">←</a>
 				</div>
 				<div class="video">
 					<iframe
@@ -136,6 +136,15 @@
 						"Gjilani" is a traditional folk dance from the Gjilan region in southeastern Kosovo, a place known for its strong cultural heritage within Albanian traditions. Like many other regional dances in Albania and Kosovo, the "Gjilani" dance
 						reflects the local customs, rhythms, and melodies. This dance is characterized by lively movements and is usually performed during celebrations such as weddings, festivals, and other community gatherings.
 					</p>
+				</div>
+				<div class="comments-section">
+					<h2>Comments:</h2>
+					<form id="comment-form">
+						<input type="text" class="button-comment-form" id="comment-name" placeholder="Your Name" required />
+						<textarea id="comment-text" class="button-text-form" placeholder="Write your comment..." required></textarea>
+						<button class="button-submit" type="submit">Post Comment</button>
+					</form>
+					<div id="comments-container"></div>
 				</div>
 			</div>
 			<div class="image-container-dance">
@@ -213,5 +222,6 @@
 				</svg>
 			</div>
 		</div>
+		<script src="comments.js"></script>
 	</body>
 </html>
