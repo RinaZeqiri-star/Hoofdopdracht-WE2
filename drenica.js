@@ -1,6 +1,6 @@
 async function fetchComments() {
 	try {
-		const response = await fetch("http://localhost:3000/tropoja");
+		const response = await fetch("http://localhost:3000/drenica");
 		const comments = await response.json();
 		const commentsContainer = document.getElementById("comments-container");
 		commentsContainer.innerHTML = "";
@@ -16,6 +16,7 @@ async function fetchComments() {
 	}
 }
 
+
 window.onload = function () {
 	document.getElementById("comment-form").addEventListener("submit", async (event) => {
 		event.preventDefault();
@@ -25,7 +26,7 @@ window.onload = function () {
 
 		if (name && commentText) {
 			try {
-				const response = await fetch("http://localhost:3000/tropoja", {
+				const response = await fetch("http://localhost:3000/drenica", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",

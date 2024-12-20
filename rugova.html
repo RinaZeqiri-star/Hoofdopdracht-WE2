@@ -116,6 +116,7 @@
 			<div class="content">
 				<div class="titel">
 					<h1>Rugova</h1>
+					<a href="/virtuaal.html" class="back-button">←</a>
 				</div>
 				<div class="video">
 					<iframe
@@ -135,6 +136,12 @@
 						Rugova dance is considered a relic of the war dances, the remnants of pantomimic dances performed in the re-enactment or preparation of battles. It was made internationally famous by the Kosovo Albanian Rugova clans. Based on the war
 						dance of the Rugova clans, Slavko Kvasnevski created in 1971 the Rugova choreography, which was part of Yugoslav folk dancing ensemble. In 1982, it was noted that "in the last time the Rugova dance has gained wide popularity".
 					</p>
+					<form id="comment-form">
+						<input type="text" class="button-comment-form" id="comment-name" placeholder="Your Name" required />
+						<textarea id="comment-text" class="button-text-form" placeholder="Write your comment..." required></textarea>
+						<button class="button-submit" type="submit">Post Comment</button>
+					</form>
+					<div id="comments-container"></div>
 				</div>
 			</div>
 			<div class="image-container-dance">
@@ -212,5 +219,6 @@
 				</svg>
 			</div>
 		</div>
+		<script src="rugova.js"></script>
 	</body>
 </html>

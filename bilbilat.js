@@ -1,6 +1,6 @@
 async function fetchComments() {
 	try {
-		const response = await fetch("http://localhost:3000/tropoja");
+		const response = await fetch("http://localhost:3000/bilbilat");
 		const comments = await response.json();
 		const commentsContainer = document.getElementById("comments-container");
 		commentsContainer.innerHTML = "";
@@ -25,7 +25,7 @@ window.onload = function () {
 
 		if (name && commentText) {
 			try {
-				const response = await fetch("http://localhost:3000/tropoja", {
+				const response = await fetch("http://localhost:3000/bilbilat", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
@@ -35,9 +35,9 @@ window.onload = function () {
 
 				const result = await response.json();
 				if (result.message === "Comment added successfully") {
-					fetchComments();
+					fetchComments(); 
 					document.getElementById("comment-name").value = "";
-					document.getElementById("comment-text").value = "";
+					document.getElementById("comment-text").value = ""; 
 				} else {
 					console.error("Error posting comment:", result);
 				}

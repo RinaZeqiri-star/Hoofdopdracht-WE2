@@ -116,6 +116,7 @@
 			<div class="content">
 				<div class="titel">
 					<h1>Bilbilat</h1>
+					<a href="/virtuaal.html" class="back-button">←</a>
 				</div>
 				<div class="video">
 					<iframe
@@ -134,6 +135,12 @@
 						The Albanian folk dance "Bilbilat" is a traditional dance with roots in Albania’s rich cultural heritage. While there is no specific historical date of origin, it evolved alongside other traditional Albanian dances, reflecting the
 						country's deep connection to music, nature, and communal celebration. The name "Bilbilat" symbolizes beauty and grace, much like the nightingale bird.
 					</p>
+					<form id="comment-form">
+						<input type="text" class="button-comment-form" id="comment-name" placeholder="Your Name" required />
+						<textarea id="comment-text" class="button-text-form" placeholder="Write your comment..." required></textarea>
+						<button class="button-submit" type="submit">Post Comment</button>
+					</form>
+					<div id="comments-container"></div>
 				</div>
 			</div>
 			<div class="image-container-dance">
@@ -211,5 +218,6 @@
 				</svg>
 			</div>
 		</div>
+		<script src="bilbilat.js"></script>
 	</body>
 </html>

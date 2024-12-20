@@ -116,6 +116,7 @@
 			<div class="content">
 				<div class="titel">
 					<h1>Drenica</h1>
+					<a href="/virtuaal.html" class="back-button">←</a>
 				</div>
 				<div class="video">
 					<iframe
@@ -135,6 +136,12 @@
 						The "Drenica" dance is often characterized by vigorous and energetic movements, symbolizing the resilience and bravery of the people. The music accompanying the dance is usually played on traditional Albanian instruments such as the
 						çifteli or lahuta, contributing to the rhythm and spirit of the performance. This dance is commonly performed at cultural festivals, weddings, and national celebrations, showcasing the region’s rich traditions.
 					</p>
+					<form id="comment-form">
+						<input type="text" class="button-comment-form" id="comment-name" placeholder="Your Name" required />
+						<textarea id="comment-text" class="button-text-form" placeholder="Write your comment..." required></textarea>
+						<button class="button-submit" type="submit">Post Comment</button>
+					</form>
+					<div id="comments-container"></div>
 				</div>
 			</div>
 			<div class="image-container-dance">
@@ -212,5 +219,6 @@
 				</svg>
 			</div>
 		</div>
+		<script src="drenica.js"></script>
 	</body>
 </html>

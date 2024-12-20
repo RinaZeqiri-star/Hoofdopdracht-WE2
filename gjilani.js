@@ -1,9 +1,9 @@
 async function fetchComments() {
 	try {
-		const response = await fetch("http://localhost:3000/gjilani"); // Change to '/comments'
+		const response = await fetch("http://localhost:3000/gjilani");
 		const comments = await response.json();
 		const commentsContainer = document.getElementById("comments-container");
-		commentsContainer.innerHTML = ""; // Clear any existing comments
+		commentsContainer.innerHTML = "";
 
 		comments.forEach((comment) => {
 			const commentElement = document.createElement("div");
@@ -16,7 +16,6 @@ async function fetchComments() {
 	}
 }
 
-// Handle comment form submission
 window.onload = function () {
 	document.getElementById("comment-form").addEventListener("submit", async (event) => {
 		event.preventDefault();
@@ -31,14 +30,14 @@ window.onload = function () {
 					headers: {
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify({ name, comment: commentText }), // Removed 'page' here
+					body: JSON.stringify({ name, comment: commentText }),
 				});
 
 				const result = await response.json();
 				if (result.message === "Comment added successfully") {
-					fetchComments(); // Refresh comments after posting
-					document.getElementById("comment-name").value = ""; // Clear the name input
-					document.getElementById("comment-text").value = ""; // Clear the comment textarea
+					fetchComments(); 
+					document.getElementById("comment-name").value = "";
+					document.getElementById("comment-text").value = ""; 
 				} else {
 					console.error("Error posting comment:", result);
 				}
@@ -48,5 +47,4 @@ window.onload = function () {
 		}
 	});
 };
-// Initial fetch of comments when page loads
 fetchComments();
