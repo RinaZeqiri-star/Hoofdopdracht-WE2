@@ -155,30 +155,30 @@ video.background-video {
 
 .image-container-personal {
 	display: flex;
-	justify-content: center; /* Center the SVG horizontally */
-	align-items: center; /* Center the SVG vertically */
-	max-height: 84vh; /* Limit the height to the viewport height */
-	overflow: hidden; /* Hide any overflow */
+	justify-content: center;
+	align-items: center;
+	max-height: 84vh;
+	overflow: hidden;
 }
 
 .image-container-personal svg {
-	width: 100%; /* Adjusts to the parent container's width */
-	height: auto; /* Keeps the aspect ratio */
-	max-width: 235px; /* Optional, limits how large the SVG can grow */
-	display: block; /* Remove inline space from inline-block behavior */
-}
-
-.image-container-virtuel {
-	width: 15%;
-	height: auto;
-	display: flex;
-	justify-content: center;
-}
-
-.image-container-virtuel img {
 	width: 100%;
-	height: 83.7vh;
-	object-fit: cover;
+	height: auto;
+	max-width: 235px;
+	display: block;
+}
+
+@keyframes move {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(100px);
+	}
+}
+
+.cls-4 {
+	animation: move 2s infinite alternate;
 }
 
 html {
@@ -566,16 +566,18 @@ svg:hover {
 }
 
 .image-container-journey {
-	width: 15%;
-	height: auto;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	max-height: 135vh;
+	overflow: hidden;
 }
 
-.image-container-journey img {
+.image-container-journey svg {
 	width: 100%;
-	height: 127.7vh;
-	object-fit: cover;
+	height: auto;
+	max-width: 235px;
+	display: block;
 }
 
 .vaile {
@@ -619,7 +621,10 @@ svg:hover {
 
 /*VIRTUAL DANCE CLASS*/
 
-/* Styles for the icon-container as buttons */
+.eerste-tekst-virtual p {
+	margin-left: 7.5%;
+}
+
 .icon-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -651,7 +656,30 @@ svg:hover {
 	font-size: 16px;
 }
 
+.image-container-virtuel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: 108vh;
+	overflow: hidden;
+}
+
+.image-container-virtuel svg {
+	width: 100%;
+	height: auto;
+	max-width: 235px;
+	display: block;
+}
+
 /*THE DANCE PAGES*/
+
+.back-button a {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	color: #000000;
+	text-decoration: none;
+}
 
 .int {
 	margin: 20px 0;
@@ -670,14 +698,16 @@ svg:hover {
 }
 
 .image-container-dance {
-	width: 15%;
-	height: auto;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	max-height: 88vh;
+	overflow: hidden;
 }
 
-.image-container-dance img {
+.image-container-dance svg {
 	width: 100%;
-	height: 84vh;
-	object-fit: cover;
+	height: auto;
+	max-width: 235px;
+	display: block;
 }
