@@ -1,6 +1,6 @@
 async function fetchComments() {
 	try {
-		const response = await fetch("http://localhost:3000/rugova"); 
+		const response = await fetch("https://web2-course-project-back-end-rinazeqiri.onrender.com/rugova");
 		const comments = await response.json();
 		const commentsContainer = document.getElementById("comments-container");
 		commentsContainer.innerHTML = "";
@@ -16,7 +16,6 @@ async function fetchComments() {
 	}
 }
 
-
 window.onload = function () {
 	document.getElementById("comment-form").addEventListener("submit", async (event) => {
 		event.preventDefault();
@@ -26,19 +25,19 @@ window.onload = function () {
 
 		if (name && commentText) {
 			try {
-				const response = await fetch("http://localhost:3000/rugova", {
+				const response = await fetch("https://web2-course-project-back-end-rinazeqiri.onrender.com/rugova", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify({ name, comment: commentText }), 
+					body: JSON.stringify({ name, comment: commentText }),
 				});
 
 				const result = await response.json();
 				if (result.message === "Comment added successfully") {
-					fetchComments(); 
+					fetchComments();
 					document.getElementById("comment-name").value = "";
-					document.getElementById("comment-text").value = ""; 
+					document.getElementById("comment-text").value = "";
 				} else {
 					console.error("Error posting comment:", result);
 				}

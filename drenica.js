@@ -1,6 +1,6 @@
 async function fetchComments() {
 	try {
-		const response = await fetch("http://localhost:3000/drenica");
+		const response = await fetch("https://web2-course-project-back-end-rinazeqiri.onrender.com/drenica");
 		const comments = await response.json();
 		const commentsContainer = document.getElementById("comments-container");
 		commentsContainer.innerHTML = "";
@@ -16,7 +16,6 @@ async function fetchComments() {
 	}
 }
 
-
 window.onload = function () {
 	document.getElementById("comment-form").addEventListener("submit", async (event) => {
 		event.preventDefault();
@@ -26,7 +25,7 @@ window.onload = function () {
 
 		if (name && commentText) {
 			try {
-				const response = await fetch("http://localhost:3000/drenica", {
+				const response = await fetch("https://web2-course-project-back-end-rinazeqiri.onrender.com/drenica", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
