@@ -119,15 +119,15 @@ video.background-video {
 
 .button {
 	position: absolute;
-	top: 60%;
+	top: 85%;
 	left: 78%;
 	z-index: 2;
 }
 
 .button button {
-	background-color: #e8d4c4;
+	background-color: #800020;
 	border: none;
-	color: #800020;
+	color: black;
 	padding: 15px 32px;
 	font-size: 25px;
 	border-radius: 5px;
