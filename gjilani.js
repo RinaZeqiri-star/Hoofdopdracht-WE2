@@ -35,9 +35,9 @@ window.onload = function () {
 
 				const result = await response.json();
 				if (result.message === "Comment added successfully") {
-					fetchComments(); 
+					fetchComments();
 					document.getElementById("comment-name").value = "";
-					document.getElementById("comment-text").value = ""; 
+					document.getElementById("comment-text").value = "";
 				} else {
 					console.error("Error posting comment:", result);
 				}
@@ -47,4 +47,5 @@ window.onload = function () {
 		}
 	});
 };
+
 fetchComments();
